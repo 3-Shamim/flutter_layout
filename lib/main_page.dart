@@ -58,14 +58,15 @@ class _MainPageState extends State<MainPage> {
           ),
         ],
         onTap: (index) {
-          _pageController.animateToPage(
-            index,
-            duration: Duration(milliseconds: 250),
-            curve: Curves.ease,
-          );
-//          setState(() {
-//            _tabIndex = index;
-//          });
+//          _pageController.animateToPage(
+//            index,
+//            duration: Duration(milliseconds: 250),
+//            curve: Curves.ease,
+//          );
+        _pageController.jumpToPage(index);
+          setState(() {
+            _tabIndex = index;
+          });
         },
       ),
     );
